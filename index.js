@@ -13,6 +13,7 @@ const bodyParser = require('body-parser');
 //set view engine to handlebars
 let app = express();
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded());
 
 
 
@@ -32,6 +33,10 @@ app.get('/', function(req, res) {
 //get listName parameter from req.body
 //call list.setName()
 //redirect to /list
+app.post('/create', function(req, res) {
+	list.setName(req.body.listName);
+	res.redirect('/list');
+});
 
 
 
