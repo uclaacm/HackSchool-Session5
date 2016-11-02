@@ -14,6 +14,7 @@ const bodyParser = require('body-parser');
 let app = express();
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded());
+app.set('view engine', 'hbs');
 
 
 
@@ -44,6 +45,9 @@ app.post('/create', function(req, res) {
 
 //TODO: GET /list
 //render 'list.hbs', passing list.get() object
+app.get('/list', function(req, res) {
+	res.render('list', list.get());
+});
 
 
 
