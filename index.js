@@ -11,6 +11,7 @@ const bodyParser = require('body-parser');
 //use express.static
 //user body-parser
 //set view engine to handlebars
+let app = express();
 
 
 
@@ -18,6 +19,9 @@ const bodyParser = require('body-parser');
 
 //TODO: GET /
 //redirect to create-list.html
+app.get('/', function(req, res) {
+	res.send("<h1>Hello World!</h1>");
+});
 
 
 
@@ -52,3 +56,11 @@ const bodyParser = require('body-parser');
 //get id from req.params
 //call list.removeItem()
 //redirect to /list
+
+
+
+
+
+//TODO: put app.listen here
+app.listen(3000);
+console.log("Listening on port 3000...");
