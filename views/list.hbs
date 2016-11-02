@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
-	<head><title><!-- TODO: Insert Title Here --></title></head>
+	<head><title>{{ name }}</title></head>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<body>
 		<!-- TODO: insert title here -->
-		<center><h1>SAMPLE Title</h1></center>
+		<center><h1>{{ name }}</h1></center>
 		<ul class='list'>
-			<!-- TODO: dynamically add list items -->
-			<li class='item'>
-				<span>SAMPLE Item</span>
-				<!-- TODO: Link to /delete/:id -->
-				<a href=#><span>X</span></a>
-			</li>
+			{{#each items}}
+				<li class='item'>
+					<span>{{ value }}</span>
+					<!-- TODO: Link to /delete/:id -->
+					<a href='/delete/{{ id }}'><span>X</span></a>
+				</li>
+			{{/each}}
 			
 			<li class='item'>
 				<form action='/add' method='POST'>
