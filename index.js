@@ -57,6 +57,10 @@ app.get('/list', function(req, res) {
 //get listItem parameter from req.body
 //call list.addItem()
 //redirect to /list
+app.post('/add', function (req, res) {
+	list.addItem(req.body.listItem);
+	res.redirect('/list');
+})
 
 
 
