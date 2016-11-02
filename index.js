@@ -70,6 +70,10 @@ app.post('/add', function (req, res) {
 //get id from req.params
 //call list.removeItem()
 //redirect to /list
+app.get('/delete/:id', function(req, res) {
+	list.removeItem(req.params.id);
+	res.redirect('/list');
+})
 
 
 
