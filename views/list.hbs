@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head><title><!-- TODO: Insert Title Here --></title></head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<body>
+		<!-- TODO: insert title here -->
+		<center><h1>SAMPLE Title</h1></center>
+		<ul class='list'>
+			<!-- TODO: dynamically add list items -->
+			<li class='item'>
+				<span>SAMPLE Item</span>
+				<!-- TODO: Link to /delete/:id -->
+				<a href=#><span>X</span></a>
+			</li>
+			
+			<li class='item'>
+				<form action='/add' method='POST'>
+					<span><input type=text name='listItem' id='value' placeholder='Add List Item Here' required/></span>
+					<span><input type=submit id='addBtn' value='Add'/></span>
+				</form>
+			</li>
+		</ul>
+	</body>
+</html>
