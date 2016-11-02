@@ -12,6 +12,7 @@ const bodyParser = require('body-parser');
 //user body-parser
 //set view engine to handlebars
 let app = express();
+app.use(express.static('public'));
 
 
 
@@ -20,7 +21,7 @@ let app = express();
 //TODO: GET /
 //redirect to create-list.html
 app.get('/', function(req, res) {
-	res.send("<h1>Hello World!</h1>");
+	res.redirect("/create-list.html");
 });
 
 
